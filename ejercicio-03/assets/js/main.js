@@ -9,16 +9,19 @@ const calculateFactorial = (numero) => {
 
 const requestNumber = () => {
     let valor = prompt("Ingresa un numero no negativo para calcular su factorial:")
-    if(parseInt(valor) < 0 ){
-        alert("El numero debe ser positivo")
-    } 
     return parseInt(valor);
 }
+
 
 const main = () => {
     let numero = requestNumber();
     let resultado = calculateFactorial(numero);
+    if(numero < 0){
+    alert("El numero debe ser positivo")
+    return;
+    } else {
     alert("El factorial del numero es " + resultado )
+    }
 }
 
 main();
